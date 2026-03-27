@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/common/SectionHeader"
 import { Button } from "@/components/ui/button"
-import { TechStack } from "@/constant/tech"
+import { TechLists } from "@/constant/tech"
 
 export function AboutSummary() {
   return (
@@ -13,7 +13,7 @@ export function AboutSummary() {
       </div>
 
       <div className="mt-5 flex w-full flex-wrap justify-center gap-3 lg:justify-start lg:gap-4">
-        {TechStack.map((tech, index) => (
+        {TechLists.map((tech, index) => (
           <Button
             variant="outline"
             key={index}

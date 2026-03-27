@@ -1,10 +1,11 @@
 import { Section } from "@/components/common/Section"
 import Image from "next/image"
 import { SectionHeader } from "@/components/common/SectionHeader"
+import { CurrentlyLearning } from "./CurrentlyLearning"
 export function AboutPage() {
   return (
-    <Section id="AboutPage">
-      <div className="container mx-auto flex items-center justify-center rounded-2xl border-y bg-gray-100 p-10 dark:bg-card">
+    <Section>
+      <div className="flex">
         <div>
           <h1 className="mb-5 text-3xl font-bold">ABOUT ME</h1>
           <SectionHeader title="PASSIONATE ABOUT" />
@@ -31,10 +32,11 @@ export function AboutPage() {
             width={800}
             height={800}
             alt="Profile"
-            className="w-full rounded-lg transition-transform hover:scale-105 hover:rotate-1 hover:ring-3 hover:ring-blue-600"
+            className="w-full rotate-1 rounded-lg ring-3 ring-blue-600 transition-transform hover:scale-105 hover:rotate-0"
           />
         </div>
       </div>
+      <CurrentlyLearning />
     </Section>
   )
 }

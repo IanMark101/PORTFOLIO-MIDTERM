@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 export function ContactSummary() {
   return (
-    <div className="border-slate- mx-auto flex w-full max-w-7xl flex-col gap-5 border-y py-16 dark:border-muted-foreground">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 border-y py-16">
       <div className="flex items-center justify-center px-4">
         <div className="w-full rounded-lg border border-gray-700 bg-gray-100 p-6 text-center sm:p-8 dark:bg-card">
           <SectionHeader

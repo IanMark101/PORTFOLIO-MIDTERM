@@ -23,6 +23,9 @@ export default function Footer() {
             <li className="text-sm lg:text-base">Projects</li>
           </Link>
         </ul>
+        <p className="mt-3">
+          © 2024 IAN MARK BUENAFLOR | MIDTERM PROJECT MOCKUP | BSIT-3 CPC
+        </p>
       </div>
     </footer>
   )

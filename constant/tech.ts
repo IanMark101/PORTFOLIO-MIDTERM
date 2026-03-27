@@ -1,8 +1,8 @@
-type TechType = {
+type AboutTechType = {
   name: string
 }
 
-export const TechStack: TechType[] = [
+export const TechLists: AboutTechType[] = [
   {
     name: "TypeScript",
   },
@@ -17,5 +17,14 @@ export const TechStack: TechType[] = [
   },
   {
     name: "Express",
+  },
+  {
+    name: "PostgreSQL",
+  },
+  {
+    name: "NeonDB",
+  },
+  {
+    name: "JavaScript",
   },
 ]
