@@ -54,7 +54,7 @@ export function HeroBanner() {
               alt="profile-picture"
               width={500}
               height={500}
-              className="ml-0 rotate-2 cursor-pointer rounded-lg transition-transform hover:scale-105 hover:rotate-0 lg:ml-10"
+              className="ml-0 rotate-2 cursor-pointer rounded-lg transition-transform hover:scale-105 hover:rotate-0 hover:ring-3 hover:ring-blue-600 lg:ml-10"
             />
             <div className="absolute -right-6 -bottom-7 flex h-24 w-24 items-center justify-center rounded-full bg-blue-700 text-3xl font-bold text-white transition-all hover:scale-110 hover:bg-blue-600 lg:-right-11">
               <p>BSIT</p>
