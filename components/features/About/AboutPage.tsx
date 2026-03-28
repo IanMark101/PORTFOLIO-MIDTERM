@@ -1,11 +1,11 @@
 import { Section } from "@/components/common/Section"
 import Image from "next/image"
 import { SectionHeader } from "@/components/common/SectionHeader"
-import { CurrentlyLearning } from "./CurrentlyLearning"
+
 export function AboutPage() {
   return (
     <Section>
-      <div className="flex flex-col-reverse items-center justify-center gap-10 py-20 lg:flex-row">
+      <div className="flex flex-col-reverse items-center justify-center gap-10 border-y-1 border-slate-300 py-20 lg:flex-row">
         <div className="flex w-[50%] flex-col items-center text-center lg:items-start lg:text-left">
           <h1 className="mb-10 text-3xl font-bold">ABOUT ME</h1>
           <SectionHeader title="PASSIONATE ABOUT" />
@@ -38,7 +38,6 @@ export function AboutPage() {
           />
         </div>
       </div>
-      <CurrentlyLearning />
     </Section>
   )
 }

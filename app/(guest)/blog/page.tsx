@@ -1,7 +1,11 @@
+import { Section } from "@/components/common/Section"
+
 export default function Blog() {
   return (
-    <div className="container mx-auto">
-      <h1>Blog Page</h1>
-    </div>
+    <Section>
+      <div className="container mx-auto">
+        <h1>Blog Page</h1>
+      </div>
+    </Section>
   )
 }
