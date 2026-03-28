@@ -5,14 +5,14 @@ import { CurrentlyLearning } from "./CurrentlyLearning"
 export function AboutPage() {
   return (
     <Section>
-      <div className="flex">
-        <div>
-          <h1 className="mb-5 text-3xl font-bold">ABOUT ME</h1>
+      <div className="flex flex-col-reverse items-center justify-center gap-10 py-20 lg:flex-row">
+        <div className="flex w-[50%] flex-col items-center text-center lg:items-start lg:text-left">
+          <h1 className="mb-10 text-3xl font-bold">ABOUT ME</h1>
           <SectionHeader title="PASSIONATE ABOUT" />
           <SectionHeader title="IT & DEVELOPMENT" className="text-blue-600" />
-          <div className="flex w-[85%] flex-col gap-5">
+          <div className="mt-5 flex w-[85%] flex-col gap-5 lg:w-full">
             <p>
-              I am lan Mark Buenaflor, a third-year Bachelor of Science in
+              I am Ian Mark Buenaflor, a third-year Bachelor of Science in
               Information Technology student at CPC. I am currently deeply
               immersed in developing my knowledge and skills in the field of web
               application development.
@@ -26,13 +26,15 @@ export function AboutPage() {
             </p>
           </div>
         </div>
-        <div className="flex size-[75%] items-center justify-center">
+
+        {/* IMAGE CONTAINER */}
+        <div className="flex size-[75%] items-center justify-center lg:w-1/2 lg:justify-end">
           <Image
             src="/profile.jpg"
             width={800}
             height={800}
             alt="Profile"
-            className="w-full rotate-1 rounded-lg ring-3 ring-blue-600 transition-transform hover:scale-105 hover:rotate-0"
+            className="animate-glow-pulse w-full max-w-[450px] rotate-1 rounded-lg ring-3 ring-blue-600 transition-transform hover:scale-105 hover:rotate-0"
           />
         </div>
       </div>
