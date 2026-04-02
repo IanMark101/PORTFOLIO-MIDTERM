@@ -4,6 +4,7 @@ import { CardLayout } from "@/components/common/Card"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/common/Section"
+
 export function ProjectPage() {
   return (
     <Section>
@@ -11,7 +12,7 @@ export function ProjectPage() {
         <SectionHeader
           title="MY WORKS"
           description="Small projects that i've created so far."
-          className="text-center"
+          className="text-left"
         />
 
         <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -20,7 +21,8 @@ export function ProjectPage() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        {/* Changed justify-center to justify-start to move the button to the left as well */}
+        <div className="mt-10 flex justify-start">
           <Link href="/projects">
             <Button className="cursor-pointer">View All Projects</Button>
           </Link>
