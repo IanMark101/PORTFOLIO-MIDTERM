@@ -1,6 +1,5 @@
 import { Section } from "@/components/common/Section"
 import Image from "next/image"
-import { SectionHeader } from "@/components/common/SectionHeader"
 
 export function AboutPage() {
   return (
@@ -8,8 +7,11 @@ export function AboutPage() {
       <div className="flex flex-col-reverse items-center justify-center gap-10 border-y-1 border-slate-300 py-20 lg:flex-row">
         <div className="flex w-[50%] flex-col items-center text-center lg:items-start lg:text-left">
           <h1 className="mb-10 text-3xl font-bold">ABOUT ME</h1>
-          <SectionHeader title="PASSIONATE ABOUT" />
-          <SectionHeader title="IT & DEVELOPMENT" className="text-blue-600" />
+          <h1 className="text-5xl leading-tight font-extrabold text-foreground md:text-6xl">
+            LET&apos;S DISCUSS
+            <br />
+            <span className="text-blue-600">TECHNOLOGY</span>
+          </h1>
           <div className="mt-5 flex w-[85%] flex-col gap-5 lg:w-full">
             <p>
               I am Ian Mark Buenaflor, a third-year Bachelor of Science in

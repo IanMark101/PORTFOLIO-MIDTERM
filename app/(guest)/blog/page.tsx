@@ -1,11 +1,4 @@
-import { Section } from "@/components/common/Section"
-
-export default function Blog() {
-  return (
-    <Section>
-      <div className="container mx-auto">
-        <h1>Blog Page</h1>
-      </div>
-    </Section>
-  )
+import { BlogLandingContent } from "@/components/features/Blog/BlogLandingContent"
+export default function BlogLandingPage() {
+  return <BlogLandingContent />
 }
