@@ -7,18 +7,17 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+
 import { Section } from "@/components/common/Section"
 import { SectionHeader } from "@/components/common/SectionHeader"
 import { ArrowRight, BookOpen, Layers, Zap } from "lucide-react"
+import { BadgeHeading } from "@/components/common/Badge"
 
 export function BlogLandingContent() {
   return (
     <Section className="py-20">
       <div className="mb-20 flex flex-col items-center text-center">
-        <Badge variant="secondary" className="mb-4 rounded-full px-4">
-          App Router Deep Dive
-        </Badge>
+        <BadgeHeading text="APP ROUTER DIVE" />
         <SectionHeader title="Mastering Nextjs Routing" />
         <p className="max-w-2xl text-base text-muted-foreground">
           A technical guide to understanding Dynamic Segments, Catch-all routes,

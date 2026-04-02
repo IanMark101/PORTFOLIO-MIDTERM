@@ -48,7 +48,6 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
         </header>
 
         {/* Main Content */}
-        {/* 'prose-neutral' and 'prose-invert' handle most of the light/dark switching automatically */}
         <main className="prose prose-neutral dark:prose-invert max-w-none">
           <p className="mb-10 text-xl leading-relaxed font-medium text-foreground/90">
             {post.excerpt}
@@ -58,7 +57,6 @@ export function BlogPostContent({ post }: BlogPostContentProps) {
           </div>
         </main>
 
-        {/* Footer Info Box */}
         <footer className="mt-20 border-t border-border pt-10">
           <div className="flex flex-col items-start justify-between gap-6 rounded-xl border border-border bg-card p-6 sm:flex-row sm:items-center">
             <div className="space-y-1">

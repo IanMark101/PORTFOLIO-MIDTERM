@@ -4,15 +4,15 @@ import React from "react"
 import { Mail, Phone } from "lucide-react"
 import { Section } from "@/components/common/Section"
 import { ContactForm } from "./ContactForm"
-
+import { BadgeHeading } from "@/components/common/Badge"
 export function ContactPage() {
   return (
     <Section>
       <div className="flex w-full flex-col items-center justify-center lg:flex-row lg:py-15">
         <div className="grid w-full max-w-6xl grid-cols-1 items-center justify-items-center gap-12 text-center lg:grid-cols-2 lg:text-left">
-          {/*Contact Info*/}
           <div className="flex flex-col items-center space-y-8 lg:items-start">
             <div>
+              <BadgeHeading text="CONTACT ME" />
               <h1 className="text-5xl leading-tight font-extrabold text-foreground md:text-6xl">
                 LET&apos;S DISCUSS
                 <br />
@@ -54,8 +54,11 @@ export function ContactPage() {
               </div>
             </div>
           </div>
-          {/*Contact Form*/}
-          <ContactForm />
+
+          {/* Contact Form */}
+          <div className="w-full max-w-md lg:max-w-none">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </Section>

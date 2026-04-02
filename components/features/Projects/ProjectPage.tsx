@@ -32,7 +32,7 @@ export function ProjectPage() {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-0">
         <div className="flex w-fit items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-          <p className="text-xs font-medium text-foreground dark:text-gray-300">
+          <p className="text-xs font-bold tracking-wider text-foreground uppercase dark:text-gray-300">
             Available for new projects
           </p>
         </div>
