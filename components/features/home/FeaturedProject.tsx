@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/common/SectionHeader"
 import { featured_projects } from "@/constant/project"
-import Card from "@/components/common/Card"
+import { CardLayout } from "@/components/common/Card"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Section } from "@/components/common/Section"
@@ -16,7 +16,7 @@ export function ProjectPage() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {featured_projects.map((data, index) => (
-            <Card key={index} project={data} />
+            <CardLayout key={index} project={data} />
           ))}
         </div>
 

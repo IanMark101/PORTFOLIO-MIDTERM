@@ -16,9 +16,9 @@ import { Badge } from "../ui/badge"
 type MyCardProps = {
   project: Project_type
 }
-export default function CardLayout({ project }: MyCardProps) {
+export function CardLayout({ project }: MyCardProps) {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0 transition-all duration-500 hover:scale-103 hover:shadow-2xl">
+    <Card className="relative w-full max-w-sm pt-0 transition-all duration-500 hover:scale-103 hover:shadow-2xl">
       <Image
         src={project.imageUrl}
         alt={`project: ${project.imageUrl}`}
