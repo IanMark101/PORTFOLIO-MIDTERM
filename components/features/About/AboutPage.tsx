@@ -27,7 +27,6 @@ export function AboutPage() {
           </div>
         </div>
 
-        {/* IMAGE CONTAINER */}
         <div className="flex size-[75%] items-center justify-center lg:w-1/2 lg:justify-end">
           <Image
             src="/profile.jpg"

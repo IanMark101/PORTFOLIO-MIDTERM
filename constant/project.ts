@@ -2,7 +2,7 @@ export type Project_type = {
   imageUrl: string
   title: string
   description: string
-  category: string[]
+  categories: string[]
   link: string
 }
 
@@ -16,7 +16,7 @@ export const featured_projects: Project_type[] = [
     title: "CPU SCHEDULER",
     description:
       "Simulate and visualize CPU scheduling in real-time. Compare algorithms, track process states, and optimize system performance efficiently.",
-    category: ["web application", "react"],
+    categories: ["React", "TypeScript", "Tailwind"],
     link: "https://os-cpu-sched-proj.vercel.app/",
   },
   {
@@ -24,7 +24,7 @@ export const featured_projects: Project_type[] = [
     title: "HOTEL BOOKING ANALYTICS",
     description:
       "Track and analyze room bookings in real-time. Visual dashboards provide insights into occupancy trends, helping optimize space usage and scheduling.",
-    category: ["web application", "NextJs"],
+    categories: ["NextJs", "MongoDB", "API"],
     link: "https://it-track-defense-proj.vercel.app/",
   },
   {
@@ -32,19 +32,37 @@ export const featured_projects: Project_type[] = [
     title: "PC Online E-Commerce System",
     description:
       "An online platform for buying and selling PCs and accessories. Features include secure checkout, inventory management, order tracking, and sales analytics.",
-    category: ["web application", "NextJs"],
-    link: "https://it-track-defense-proj.vercel.app/",
+    categories: ["NextJs", "PostgreSQL", "Node.js"],
+    link: "https://appsdev-pcshop-proj.vercel.app/",
   },
 ]
 
 export const categories: categories_type[] = [
   {
-    categoryType: "web application",
+    categoryType: "React",
   },
   {
     categoryType: "NextJs",
   },
   {
-    categoryType: "react",
+    categoryType: "TypeScript",
+  },
+  {
+    categoryType: "Tailwind",
+  },
+  {
+    categoryType: "Node.js",
+  },
+  {
+    categoryType: "MongoDB",
+  },
+  {
+    categoryType: "PostgreSQL",
+  },
+  {
+    categoryType: "Firebase",
+  },
+  {
+    categoryType: "API",
   },
 ]

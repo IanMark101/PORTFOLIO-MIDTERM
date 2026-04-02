@@ -1,3 +1,5 @@
+"use client"
+
 import { CardLayout } from "@/components/common/Card"
 import { Section } from "@/components/common/Section"
 import { SectionHeader } from "@/components/common/SectionHeader"
@@ -9,8 +11,22 @@ import {
 } from "@/components/ui/input-group"
 import { categories, featured_projects } from "@/constant/project"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
 
 export function ProjectPage() {
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("All")
+
+  const filteredProjects = featured_projects.filter((project) => {
+    const matchesSearch = project.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase())
+    const matchesCategory =
+      selectedCategory === "All" ||
+      project.categories.includes(selectedCategory)
+    return matchesSearch && matchesCategory
+  })
+
   return (
     <Section>
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-0">
@@ -33,6 +49,8 @@ export function ProjectPage() {
             <InputGroupInput
               placeholder="Filter by tech..."
               className="text-xs placeholder:text-slate-400 sm:text-sm sm:placeholder:text-slate-400 dark:placeholder:text-gray-500"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
             <InputGroupAddon align="inline-end">
               <SearchIcon className="mr-3 h-4 w-4 text-slate-400 transition-colors sm:h-5 sm:w-5 dark:text-gray-500" />
@@ -41,15 +59,30 @@ export function ProjectPage() {
         </div>
 
         <div className="flex flex-wrap gap-2 sm:gap-3">
+          <Button
+            variant={selectedCategory === "All" ? "default" : "outline"}
+            className={`px-4 py-2 text-xs font-semibold transition-all duration-300 sm:px-5 sm:py-2.5 sm:text-sm ${
+              selectedCategory === "All"
+                ? "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700"
+                : "border-2 border-slate-300 text-slate-700 hover:border-blue-500 hover:bg-blue-50 dark:border-slate-600 dark:text-slate-300 dark:hover:border-blue-500 dark:hover:bg-blue-950/40"
+            }`}
+            onClick={() => setSelectedCategory("All")}
+          >
+            All
+          </Button>
+
           {categories.map((cat, index) => (
             <Button
               key={index}
-              variant={index === 0 ? "default" : "outline"}
-              className={`px-4 py-2 text-xs transition-all duration-300 sm:px-5 sm:py-2.5 sm:text-sm ${
-                index === 0
-                  ? "bg-white text-black hover:bg-white/90 dark:bg-white dark:text-black dark:hover:bg-white/90"
-                  : "border-2 border-slate-700 text-slate-300 hover:border-slate-500 hover:text-slate-100 dark:border-gray-600 dark:hover:border-gray-500"
+              variant={
+                selectedCategory === cat.categoryType ? "default" : "outline"
+              }
+              className={`px-4 py-2 text-xs font-semibold transition-all duration-300 sm:px-5 sm:py-2.5 sm:text-sm ${
+                selectedCategory === cat.categoryType
+                  ? "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700"
+                  : "border-2 border-slate-300 text-slate-700 hover:border-blue-500 hover:bg-blue-50 dark:border-slate-600 dark:text-slate-300 dark:hover:border-blue-500 dark:hover:bg-blue-950/40"
               }`}
+              onClick={() => setSelectedCategory(cat.categoryType)}
             >
               {cat.categoryType}
             </Button>
@@ -57,7 +90,7 @@ export function ProjectPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {featured_projects.map((data, index) => (
+          {filteredProjects.map((data, index) => (
             <div
               key={index}
               className="group transition-all duration-300 hover:scale-105"
@@ -66,6 +99,14 @@ export function ProjectPage() {
             </div>
           ))}
         </div>
+
+        {filteredProjects.length === 0 && (
+          <div className="py-12 text-center">
+            <p className="text-slate-400 dark:text-gray-500">
+              No projects found matching your search.
+            </p>
+          </div>
+        )}
       </div>
     </Section>
   )
