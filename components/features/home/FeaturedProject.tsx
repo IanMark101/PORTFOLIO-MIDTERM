@@ -14,7 +14,6 @@ export function ProjectPage() {
           <SectionHeader
             title="MY WORKS"
             description="Small projects that i've created so far."
-            // 'text-center' is default for mobile, 'lg:text-left' for large screens
             className="text-center lg:text-left"
           />
         </div>
@@ -27,9 +26,14 @@ export function ProjectPage() {
         </div>
 
         {/* Button Section */}
-        <div className="mt-10 flex justify-center lg:justify-start">
+        <div className="mt-10 flex justify-center">
           <Link href="/projects">
-            <Button className="cursor-pointer">View All Projects</Button>
+            <Button
+              className="cursor-pointer p-8 text-2xl font-bold"
+              variant="outline"
+            >
+              View All Projects
+            </Button>
           </Link>
         </div>
       </div>
