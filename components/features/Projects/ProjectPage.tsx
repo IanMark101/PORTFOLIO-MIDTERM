@@ -12,7 +12,7 @@ import {
 import { categories, featured_projects } from "@/constant/project"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-
+import { BadgeHeading } from "@/components/common/Badge"
 export function ProjectPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -30,13 +30,7 @@ export function ProjectPage() {
   return (
     <Section>
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-0">
-        <div className="flex w-fit items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-blue-500"></div>
-          <p className="text-xs font-bold tracking-wider text-foreground uppercase dark:text-gray-300">
-            Available for new projects
-          </p>
-        </div>
-
+        <BadgeHeading text="AVAILABLE FOR NEW PROJECTS" />
         <div>
           <SectionHeader
             title="MY RECENT WORK"
