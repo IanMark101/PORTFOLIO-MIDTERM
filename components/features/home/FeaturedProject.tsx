@@ -11,10 +11,10 @@ export function ProjectPage() {
         <SectionHeader
           title="MY WORKS"
           description="Small projects that i've created so far."
-          className="text-center lg:text-left"
+          className="text-center"
         />
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {featured_projects.map((data, index) => (
             <CardLayout key={index} project={data} />
           ))}
